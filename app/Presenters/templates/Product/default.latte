@@ -1,0 +1,22 @@
+{snippet productTable}
+    <table>
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>price</th>
+            <th>date created</th>
+            <th></th>
+        </tr>
+        {foreach $items as $item}
+            <tr>
+                <td><a href="{plink Product:detail, $item->getId()}">{$item->getId()}</a></td>
+                <td>{$item->getName()}</td>
+                <td>{$item->getPrice()}</td>
+                <td>{$item->getDateCreated()->format('Y-m-d')}</td>
+                <td><a n:href="delete!, $item->getId()">X</a></td>
+            </tr>
+        {/foreach}
+    </table>
+{/snippet}
+
+<a href="{plink Product:detail}">New item</a>

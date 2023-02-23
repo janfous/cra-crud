@@ -8,3 +8,6 @@ search:
 
 services:
 	- App\Router\RouterFactory::createRouter
+	- App\model\entity\Product\Product
+	- App\model\service\Product\ProductService
+	- App\model\facade\Product\ProductFacade
