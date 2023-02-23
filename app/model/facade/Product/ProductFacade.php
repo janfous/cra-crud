@@ -7,7 +7,9 @@ use Nette\Http\Session;
 
 class ProductFacade
 {
+
     private ProductService $productService;
+
     private Session $session;
 
     public function __construct(
